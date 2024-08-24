@@ -132,12 +132,12 @@ section {
 .spacer {
     content: " ";
     position: absolute;
-    background: linear-gradient(#ffffff 40%, transparent 100%);
+    background: linear-gradient(#ffffff 10%, transparent 100%);
     left: 0;
-    top: 0em;
-    height: 30em;
+    top: 10em;
+    height: 20em;
     width: 100%;
-    transition: all 0.3s;
+    transition: all 0.1s;
     z-index: -1;
 }
 
