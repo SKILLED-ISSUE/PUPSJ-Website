@@ -9,7 +9,7 @@ const header = document.querySelector(".header-default"),
 
 document.addEventListener("DOMContentLoaded", function () {
   let lastScrollTop = 0;
-  const scrollThreshold = 30;
+  const scrollThreshold = 20;
 
   window.addEventListener("scroll", function () {
     let currentScrollTop =
