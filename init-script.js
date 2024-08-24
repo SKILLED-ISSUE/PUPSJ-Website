@@ -1,9 +1,9 @@
 const header = document.querySelector(".init-header"),
   spacer = document.querySelector(".spacer");
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", function () {
   let lastScrollTop = 0;
-  const scrollThreshold = 30;
+  const scrollThreshold = 20;
 
   window.addEventListener("scroll", function () {
     let currentScrollTop =
