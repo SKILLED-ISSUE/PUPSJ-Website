@@ -199,7 +199,10 @@ img {
 }
 
 #preloader {
-    background: #ffffff url(CUBE_LOAD.gif) no-repeat center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff no-repeat center center;
     background-size: 8%;
     height: 100vh;
     width: 100%;
