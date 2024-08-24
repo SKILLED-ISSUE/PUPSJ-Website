@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "watch:init-sass": "sass -w assets/css/init-style.scss assets/css/init-style.css",
     "watch:main-sass": "sass -w assets/css/main-style.scss assets/css/main-style.css"    
   },
   "dependencies": {
