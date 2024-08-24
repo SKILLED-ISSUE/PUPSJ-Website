@@ -133,12 +133,12 @@ img {
 .spacer {
     content: " ";
     position: absolute;
-    background: linear-gradient(#ffffff 10%, transparent 100%);
+    background: linear-gradient(#ffffff, #ffffff 45%, transparent);
     left: 0;
-    top: 10em;
-    height: 20em;
+    top: 0em;
+    height: 28em;
     width: 100%;
-    transition: all 0.2s;
+    transition: all 0.1s;
     z-index: -1;
 }
 
