@@ -1,20 +1,21 @@
-var loader = document.getElementById("preloader");
-
-window.addEventListener("load", function () {
+// Function to hide the preloader
+function hidePreloader() {
+  const loader = document.getElementById("preloader");
   loader.classList.add("fade-out");
 
-  loader.addEventListener("transitionend", function () {
+  loader.addEventListener("transitionend", () => {
     loader.style.display = "none";
   });
-});
+}
 
-document.querySelector("header").innerHTML = `
+// Function to load the header content
+function loadHeader() {
+  const headerHTML = `
     <div class="cmps-logo">
-      <a href="../index.html"><img id="logo"  src="../assets/PUPSJ-Logo.png" alt="PUP San Juan logo" /></a>
+      <a href="../index.html"><img id="logo" src="../assets/PUPSJ-LOGO.png" alt="PUP San Juan logo" /></a>
     </div>
-
     <div class="cmps-header">
-      <a href="../index.html"><img id="campus-name" href="../index.html" src="../assets/PUPSJ-Header.png" alt="PUP San Juan logo" /></a>
+      <a href="../index.html"><img id="campus-name" src="../assets/PUPSJ-HEADER.png" alt="PUP San Juan logo" /></a>
       <ul class="nav-items">
         <li class="dropdown">
           <a href="#">About</a>
@@ -39,18 +40,40 @@ document.querySelector("header").innerHTML = `
             <li><a href="#">BSBA - FM</a></li>
           </ul>
         </li>
-        <li><a href="">Exhibits</a></li>
+        <li><a href="#">Exhibits</a></li>
       </ul>
     </div>
-
     <button type="submit" class="search-button">
       <img class="search" src="../assets/search.png" alt="search" />
     </button>`;
+  
+  document.querySelector("header").innerHTML = headerHTML;
+}
 
-document.querySelector("footer").innerHTML = `
+// Function to load the footer content
+function loadFooter() {
+  const footerHTML = `
     <h class="left">
       PUP San Juan Branch <br> All Rights Reserved <br> 2024
     </h>
     <h class="right">
       The Country's 1st PolytechnicU
     </h>`;
+  
+  document.querySelector("footer").innerHTML = footerHTML;
+}
+
+// Function to load the footer content
+function loadIcon() {
+  const logoHTML = `<link rel="icon" href="../assets/PUPSJ-LOGO.png" type="image/icon type" />`;
+  
+  document.querySelector("#head").innerHTML = logoHTML;
+}
+
+// Event listener to hide the preloader on window load
+window.addEventListener("load", () => {
+  hidePreloader();
+  loadHeader();
+  loadFooter();
+  loadIcon();
+});
