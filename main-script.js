@@ -71,7 +71,7 @@ function loadIcon() {
 }
 
 // Event listener to hide the preloader on window load
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", () => {
   hidePreloader();
   loadHeader();
   loadFooter();
