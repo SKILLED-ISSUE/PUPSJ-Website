@@ -30,7 +30,7 @@ img {
     max-width: 100%;
 }
 
-.header-default {
+.init-header {
     scroll-snap-align: start;
     padding: 2em 3em 0em 3em;
     display: flex;
@@ -59,7 +59,6 @@ img {
         max-width: 3em;
         margin-top: -2em;
         padding: 0em 3em 0em 3em;
-        transition: 0.1s ease-in-out;
     }
 
     .search-button {
@@ -73,52 +72,48 @@ img {
     }
 }
 
-.header-on-scroll {
-    padding: 0.5em 3em 0em 3em;
+.header-container {
+    padding: 0.5em 3em 0.5em 3em;
     display: flex;
     position: sticky;
     top: 0;
     width: 100%;
     box-sizing: border-box;
     background-color: white;
-    transition: 0.1s ease-in-out;
+    transition: 0.2s ease-in-out;
     gap: 1em;
 
-    #logo-on-scroll {
+    #logo {
         max-height: 4em;
-        transition: 0.1s ease-in-out;
     }
 
-    .cmps-header-on-scroll {
+    .cmps-header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        transition: 0.1s ease-in-out;
         width: 100%;
 
-        #campus-name-on-scroll {
+        #campus-name {
             margin-top: .5em;
             max-height: 3em;
-            transition: 0.1s ease-in-out;
         }
     }
 
-    .search-on-scroll {
+    .search {
         filter: opacity(0.4) drop-shadow(0 0 0 #ff2929);
         max-width: 2em;
         margin-top: 0.5em;
         padding: 0em 0em 0em 0em;
-        transition: 0.1s ease-in-out;
     }
 
-    .search-button-on-scroll {
+    .search-button {
         border: 0;
         background: transparent;
         cursor: pointer;
         max-height: 7em;
     }
 
-    .search-on-scroll:hover {
+    .search:hover {
         filter: opacity(0.1) drop-shadow(0 0 0 #ff2929);
     }
 }
@@ -138,7 +133,7 @@ img {
     top: 0em;
     height: 28em;
     width: 100%;
-    transition: all 0.1s;
+    transition: all 0.2s;
     z-index: -1;
 }
 
@@ -203,68 +198,6 @@ img {
     }
 }
 
-.nav-items-on-scroll {
-    font-size: 1.2rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 3em;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.1s ease-in-out;
-
-    a {
-        text-decoration: none;
-        color: #7f1414;
-        transition: color 0.1s ease-in-out;
-    }
-
-    a:hover {
-        color: #7f141494;
-    }
-
-    .dropdown {
-        position: relative;
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            list-style-type: none;
-            padding: 0;
-            padding-top: 1rem;
-            margin-left: -1rem;
-
-            li {
-                padding: 0;
-            }
-
-            a {
-                color: #7f1414;
-                text-decoration: none;
-                display: block;
-                font-size: 1.2rem;
-                padding: 1rem;
-                transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            }
-
-            a:hover {
-                color: #fff;
-                box-shadow: inset 200px 0 0 0 #7f1414;
-            }
-        }
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-}
-
 #preloader {
     background: #ffffff url(CUBE_LOAD.gif) no-repeat center center;
     background-size: 8%;
@@ -275,12 +208,12 @@ img {
     opacity: 1;
     transition: opacity 1s ease;
     /* Smooth fade-out transition */
+    &.fade-out {
+        opacity: 0;
+    }
 }
 
-#preloader.fade-out {
-    opacity: 0;
-    /* Fades out */
-}
+
 
 .cform {
     position: relative;

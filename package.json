@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "watch:sass": "sass -w assets/css/style.scss assets/css/style.css"
+    "watch:init-sass": "sass -w assets/css/init-style.scss assets/css/init-style.css",
+    "watch:main-sass": "sass -w assets/css/main-style.scss assets/css/main-style.css"    
   },
   "dependencies": {
     "sass": "^1.77.8"
