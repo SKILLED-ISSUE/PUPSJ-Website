@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       searchIcon.classList.add("search-on-scroll");
       searchButton.classList.add("search-button-on-scroll");
       spacer.style.height = '0em';
+      spacer.style.top = '5em';
     } else if (currentScrollTop <= scrollThreshold) {
       header.classList.remove("header-on-scroll");
       logo.id = "logo";
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       searchIcon.classList.remove("search-on-scroll");
       searchButton.classList.remove("search-button-on-scroll");
       spacer.style.height = '20em';
+      spacer.style.top = '10em';
     }
 
     lastScrollTop = currentScrollTop;
