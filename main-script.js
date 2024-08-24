@@ -1,12 +1,9 @@
-function hidePreloader () {
-  const loader = document.getElementById("preloader");
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function () {
   loader.classList.add("fade-out");
 
-  loader.addEventListener("transitionend", () => {
+  loader.addEventListener("transitionend", function () {
     loader.style.display = "none";
   });
-}
-
-window.addEventListener("load", () => {
-  hidePreloader();
 });
