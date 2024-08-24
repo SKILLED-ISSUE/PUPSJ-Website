@@ -1,6 +1,8 @@
 @font-face {
   font-family: "Karla";
   src: url("fonts/Karla/Karla-VariableFont_wght.ttf") format("truetype");
+  font-family: "Trajan-Pro";
+  src: url("fonts/trajan-pro/TrajanPro-Regular.ttf") format("truetype");
 }
 * {
   font-family: "Karla", sans-serif;
@@ -15,8 +17,14 @@ body {
   margin: 0em;
 }
 
-section {
-  z-index: -1;
+.after-scroll {
+  position: relative;
+  z-index: -2;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
 }
 
 .header-default {
@@ -29,8 +37,6 @@ section {
   background-color: white;
 }
 .header-default #logo {
-  object-fit: cover;
-  max-width: 100%;
   max-height: 8em;
 }
 .header-default .cmps-header {
@@ -40,8 +46,6 @@ section {
   gap: 1em;
 }
 .header-default .cmps-header #campus-name {
-  object-fit: cover;
-  max-width: 100%;
   max-height: 7em;
 }
 .header-default .search {
@@ -72,8 +76,6 @@ section {
   gap: 1em;
 }
 .header-on-scroll #logo-on-scroll {
-  object-fit: cover;
-  max-width: 100%;
   max-height: 4em;
   transition: 0.1s ease-in-out;
 }
@@ -85,9 +87,7 @@ section {
   width: 100%;
 }
 .header-on-scroll .cmps-header-on-scroll #campus-name-on-scroll {
-  object-fit: cover;
   margin-top: 0.5em;
-  max-width: 100%;
   max-height: 3em;
   transition: 0.1s ease-in-out;
 }
@@ -250,7 +250,7 @@ section {
   /* Fades out */
 }
 
-.overview {
+.cform {
   position: relative;
   background: #ffffff;
   padding: 3em 0em;
@@ -261,17 +261,66 @@ section {
   justify-content: center;
   gap: 5em;
 }
-
-#motto-desc {
+.cform #motto-desc {
   font-weight: 500;
   width: 40em;
   word-wrap: break-word;
 }
-
-#banner {
-  object-fit: cover;
-  max-width: 100%;
+.cform #banner {
   max-height: 23em;
+}
+
+.dir-container {
+  background: white;
+}
+.dir-container .dir-bg {
+  background-image: linear-gradient(to right, #ffffff 10%, #7f1414, #7f1414);
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dir-container .dir-bg #dir-img {
+  height: 30em;
+}
+.dir-container .dir-bg #dir-quote {
+  display: flex;
+  flex-direction: column;
+}
+.dir-container .dir-bg #dir-quote #dir-header1 {
+  font-size: 5rem;
+  font-weight: 1000;
+  color: white;
+  width: 5em;
+}
+.dir-container .dir-bg #dir-quote #dir-header2 {
+  margin-top: -0.4em;
+  font-size: 5rem;
+  color: white;
+  width: 5em;
+}
+.dir-container .dir-bg #dir-quote #dir-message {
+  margin-left: 0.5em;
+  width: 35em;
+  font-weight: 400;
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #7f1414;
+  padding: 2em 20em 2.5em 20em;
+}
+footer .left {
+  color: white;
+}
+footer .right {
+  font-family: "Trajan-Pro";
+  font-size: x-large;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
